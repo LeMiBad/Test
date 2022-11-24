@@ -1,0 +1,85 @@
+.wrapper
+    height: 900px
+    width: 100%
+    border: 1px solid #2628421F
+    border-radius: 10px
+    display: flex
+
+.tasks
+    height: 100%
+    width: 30%
+    box-sizing: border-box
+    border-right: 1px solid #2628421F
+    .tasksHeader
+        height: 5%
+        width: 100%
+        background-color: #F7F8FC
+        border-bottom: 1px solid #2628421F
+        display: flex
+        align-items: center
+        padding-left: 5%
+        color: #6D6E85
+        font-size: 14px
+        font-weight: 500
+        box-sizing: border-box
+    .tasksEmpty
+        min-height: 5%
+        border-bottom: 1px solid #2628421F
+        box-sizing: border-box
+
+
+.gantChart
+    height: 100%
+    width: 70%
+    box-shadow: inset -4px 0px 8px 0px #101f2b1a
+    display: flex
+    flex-direction: column
+    .timeline
+        height: 100%
+        width: 100%
+        background-color: #F7F8FC
+        display: flex
+        .week
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            border-right: 1px solid #2628421F
+            box-sizing: border-box
+            .weekTime
+                width: 148px
+                font-size: 14px
+                min-height: 2.5%
+                border-bottom: 1px solid #2628421F
+                box-sizing: border-box
+                display: flex
+                justify-content: center
+            .days
+                min-height: 2.5%
+                display: flex
+                border-bottom: 1px solid #2628421F
+                box-sizing: border-box
+                width: 100%
+                .day
+                    width: calc(100%/7)
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-right: 1px solid #2628421F
+                    font-size: 14px
+            .lines
+                background-color: white
+                width: 100%
+                display: flex
+                height: 100%
+                .line
+                    width: calc(100%/7)
+                    border-right: 1px solid #2628421F
+                    .lineChapter
+                        height: calc( 5% + 2.25px )
+                        width: 100%
+                        // background-color: red
+                        padding: 50% 0
+                        box-sizing: border-box
+
+
