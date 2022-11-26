@@ -1,0 +1,431 @@
+@font-face {
+    font-family: "Euclid Circular"; 
+    src: url("./../fonts/Euclid\ Circular\ A\ SemiBold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "Euclid Circular Light"; 
+    src: url("./../fonts/Euclid\ Circular\ A\ Light.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: 'fontello';
+    src: url('../fonts/fontello/fontello.eot?58690354');
+    src: url('../fonts/fontello/fontello.eot?58690354#iefix') format('embedded-opentype'),
+        url('../fonts/fontello/fontello.woff2?58690354') format('woff2'),
+        url('../fonts/fontello/fontello.woff?58690354') format('woff'),
+        url('../fonts/fontello/fontello.ttf?58690354') format('truetype'),
+        url('../fonts/fontello//fontello.svg?58690354#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (max-width: 1100px) {
+    header {
+        max-width: 100% !important;
+        flex-direction: column !important;
+        padding-left: 0% !important;
+    }
+
+    .lang_button_wrapper {
+        margin-right: 20px;
+    }
+
+    .img_wrapper {
+        order: -1;
+    }
+
+    .img_wrapper_item{
+        max-width: 140% !important;
+    }
+
+    .img_wrapper .lang_button_wrapper {
+        right: 0 !important;
+    } 
+
+    .logo_wrapper {
+        width: 90%;
+        box-sizing: border-box;
+        margin: 0 auto !important;
+    }
+
+    .logo {
+        width: 100%;
+        margin-top: -40px;
+    }
+
+    .logo .logo_desc {
+        width: 100% !important;
+    }
+
+    .logo .blue_button {
+        width: 100% !important;
+        margin-bottom: 32px;
+    }
+
+    .benefits {
+        display: none !important;
+    }
+
+    .mobile_benefits {
+        display: flex !important
+    }
+
+    .services_wrapper {
+        flex-direction: column;
+        width: 90% !important;
+        margin: 0 auto;
+    }
+
+    .services_wrapper_item {
+        width: 100% !important;
+    }
+
+    .services_wrapper_item img{
+        height: 150px !important;
+    }
+
+    .services_wrapper_item_text h2 {
+        font-size: 16px !important;
+    }
+    .services_wrapper_item_text p {
+        font-size: 13px !important;
+    }
+
+    .worth {
+        flex-direction: column;
+        width: 90% !important;
+        margin: 0 auto;
+    }
+
+    .worth_text {
+        width: 100% !important;
+    }
+
+    .worth_text button {
+        width: 100% !important;
+        margin-bottom: 32px;
+    }
+
+    .worth_benefits {
+        gap: 20px;
+    }
+
+    .worth_benefits_row {
+        justify-content: space-between;
+    }
+
+    .icon_wrapper {
+        max-width: 40px;
+    }
+
+    .worth_benefits_card {
+        box-shadow: 6px 4px 12px 0px #0000000D;
+        padding: 15px;
+        border-radius: 20px;
+        width: 45% !important;
+    }
+}
+
+* {
+    font-family: 'Euclid Circular', 'fontello';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #29374E;
+}
+
+body {
+    width: 100%;
+}
+
+.img_wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.img_wrapper img {
+    user-select: none;
+    max-width: 100%;
+    background-size: contain;
+}
+
+
+header {
+    background-color: #CBECFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 18%;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_name {
+    display: flex;
+    gap: 10px;
+    user-select: none;
+}
+
+.logo_name_item_left {
+    font-size: 64px;
+    color: #29374E;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo_name_item_right {
+    font-size: 64px;
+    color: #0962E8;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0 12px;
+}
+
+.logo_desc {
+    color: #29374E;
+    width: 384px;
+    font-family: 'Euclid Circular Light';
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.lang_button_wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 19px;
+    right: 180px;
+    top: 4%;
+}
+
+.lang_button_wrapper .lang_button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: 0;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.lang_button_wrapper .lang_button:hover {
+    background-color: white;
+    color: #0962E8;
+}
+
+.lang_button_wrapper .active {
+    background-color: white;
+    color: #0962E8;
+    cursor: default;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    margin: -3% auto 0 auto;
+    gap: 20px;
+}
+
+.benefits_wrapper {
+    display: flex;
+}
+
+.benefits_wrapper_item {
+    padding: 20px;
+    background-color: white;
+    color: #29374E;
+    box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+    width: 45%;
+    height: 118px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+}
+
+.benefits_wrapper_item_name {
+    display: flex;
+    justify-content: space-between;
+    bottom: -40px;
+    right: 180px;
+    width: 50%;
+    gap: 20px;
+}
+
+.mobile_benefits {
+    display: none;
+    width: 90%;
+    margin: 0 auto 32px auto;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mobile_benefits_wrapper {
+    color: #29374E;
+    box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+    height: 118px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+.mobile_benefits_wrapper_item {
+    background-color: white;
+    width: 50%;
+    color: #29374E;
+    box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 10px 5% 10px;
+    box-sizing: border-box;
+}
+
+.mobile_benefits_wrapper_item .icon_wrapper {
+    margin-top: -10px;
+    transform: translateY(-13px);
+}
+
+.services_wrapper {
+    display: flex;
+    gap: 20px;
+    width: 66%;
+    margin: 0 auto 115px auto;
+}
+
+.services_wrapper_item {
+    background-color: #E9F6FF;
+    color: black;
+    padding: 40px 20px 0 20px;
+    width: 50%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.services_wrapper_item_text {
+    margin-right: 60px;
+    width: 45%;
+}
+
+.services_wrapper_item_text h2{
+    color: black;
+    font-size: 20px;
+}
+
+.services_wrapper_item_text h2:nth-child(2) {
+    margin-bottom: 15px;
+}
+
+.services_wrapper_item_text p{
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Euclid Circular Light';
+}
+.services_wrapper_item img{
+    height: 190px;
+    box-shadow: 8px -8px 16px 0px #0000000F;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.worth {
+    width: 66%;
+    margin: 0 auto 10% auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.worth_text {
+    width: 50%;
+}
+
+.worth_text h1:nth-child(1){
+    margin-bottom: 5px;
+}
+.worth_text p{
+    font-family: 'Euclid Circular Light';
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.worth_benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.worth_benefits_row {
+    display: flex;
+}
+
+.worth_benefits_card {
+    width: 225px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Euclid Circular Light';
+}
+
+.worth_benefits_card:nth-child(1) {
+    margin-right: 10%;
+}
+
+/* UI */
+
+.blue_button {
+    background-color: #0962E8;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 20px;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+}
+
+.blue_button:hover {
+    background-color: #3680ee;
+}
+
+.blue_text {
+    color: #0962E8;
+}
+
+.icon_wrapper {
+    min-width: 40px;
+    min-height: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFF9FF;
+    color: #0962E8;
+    font-weight: 600;
+}
+
+.icon_wrapper_alternative {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 40px;
+    font-size: 40px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    background-color: #EFF9FF;
+    color: #0962E8;
+}

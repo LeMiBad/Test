@@ -1,9 +1,32 @@
+.exportButton
+    display: flex
+    align-items: center
+    gap: 10px
+    cursor: pointer
+    border: 1px solid #2628421F
+    outline: none
+    padding: 12px
+    border-radius: 10px
+    background-color: white
+.exportButton:hover
+    border: 1px solid #26284252
+
+
 .wrapper
-    height: 900px
+    position: relative
+    height: 85vh
     width: 100%
     border: 1px solid #2628421F
     border-radius: 10px
     display: flex
+    overflow: hidden
+    .shadow
+        height: 100%
+        width: 22px
+        right: 0
+        background: linear-gradient(90deg, #ffffff00 20%, #00000046 100%)
+        position: absolute
+
 
 .tasks
     height: 100%
@@ -44,12 +67,12 @@
             flex-direction: column
             justify-content: center
             align-items: center
-            border-right: 1px solid #2628421F
             box-sizing: border-box
             .weekTime
                 width: 148px
                 font-size: 14px
                 min-height: 2.5%
+                border-right: 1px solid #2628421F
                 border-bottom: 1px solid #2628421F
                 box-sizing: border-box
                 display: flex
@@ -57,15 +80,17 @@
             .days
                 min-height: 2.5%
                 display: flex
-                border-bottom: 1px solid #2628421F
                 box-sizing: border-box
                 width: 100%
                 .day
+                    position: relative
                     width: calc(100%/7)
                     display: flex
                     justify-content: center
                     align-items: center
                     border-right: 1px solid #2628421F
+                    border-bottom: 1px solid #2628421F
+                    box-sizing: border-box
                     font-size: 14px
             .lines
                 background-color: white
@@ -82,4 +107,12 @@
                         padding: 50% 0
                         box-sizing: border-box
 
-
+.pos
+    position: absolute
+    width: 20px
+    height: 20px
+    left: 0
+    top: 0
+    background-color: #E2EBFF
+    border-radius: 5px
+    border: 1px solid #497CF6
